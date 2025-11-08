@@ -1,0 +1,49 @@
+# ==========================
+# Python (python-etl)
+# ==========================
+# Ignore virtual environment folder
+python-etl/venv/
+
+# Byte-compiled / optimized / DLL files
+python-etl/__pycache__/
+python-etl/*.py[cod]
+python-etl/*$py.class
+
+# Distribution / packaging
+python-etl/build/
+python-etl/dist/
+python-etl/*.egg-info/
+
+# Jupyter Notebook checkpoints
+python-etl/.ipynb_checkpoints
+
+# Coverage / testing
+python-etl/.tox/
+python-etl/.coverage
+python-etl/coverage.xml
+python-etl/.hypothesis/
+
+# ==========================
+# Java / Maven (s3-client)
+# ==========================
+# Compiled class files
+s3-client/**/*.class
+
+# Maven target directory
+s3-client/target/
+
+# Eclipse project files
+s3-client/.settings/
+s3-client/.project
+s3-client/.classpath
+
+# ==========================
+# OS / system files
+# ==========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
