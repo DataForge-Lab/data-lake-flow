@@ -14,28 +14,62 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <!-- AWS SDK version -->
-        <aws.sdk.version>2.25.63</aws.sdk.version>
+        <!--aws.sdk.version>2.25.63</aws.sdk.version-->
+        <awssdk.version>2.20.25</awssdk.version>
     </properties>
 
     <dependencies>
         <!-- AWS SDK v2 - S3 Client -->
-        <dependency>
-            <groupId>software.amazon.awssdk</groupId>
-            <artifactId>s3</artifactId>
-            <version>${aws.sdk.version}</version>
-        </dependency>
+       	<!-- Use the same version as s3-transfer-manager -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>${awssdk.version}</version>
+		</dependency>
 
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3-transfer-manager</artifactId>
+			<version>${awssdk.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>software.amazon.awssdk.crt</groupId>
+			<artifactId>aws-crt</artifactId>
+			<version>0.30.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>regions</artifactId>
+			<version>${awssdk.version}</version>
+		</dependency>		
+
+		<dependency>
+			<artifactId>apache-client</artifactId>
+			<groupId>software.amazon.awssdk</groupId>
+			<version>${awssdk.version}</version>
+		</dependency>		
+	
         <!-- Logging (optional but recommended) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.12</version>
         </dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.12</version>
+		</dependency>
+
+
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Build an executable JAR -->
+			<!-- Build an executable JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -56,7 +90,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <!-- update with your Main class when ready -->
+							<!-- update with your Main class when ready -->
                             <mainClass>com.dataforge.lab.App</mainClass>
                         </manifest>
                     </archive>
