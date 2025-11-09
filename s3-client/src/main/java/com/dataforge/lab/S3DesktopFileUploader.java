@@ -14,12 +14,12 @@ import software.amazon.awssdk.transfer.s3.model.UploadFileRequest;
 
 public class S3DesktopFileUploader {
 
-	private static final String BUCKET_NAME = "dev-mdl-inputhall-dataset-ingest-test";
-	private static final String FILE_PATH = "C:/Users/sbigdel/git-local-repository/data-lake-flow/";
+	private static final String BUCKET_NAME = "data-lake-flow-raw-ingest";
+	private static final String FILE_PATH = "./data/";
 	private static final Logger logger = LoggerFactory.getLogger(S3DesktopFileUploader.class);
-	private static final String PROFILE_NAME = "mystat-s3-uploader-profile"; // the new one
+	private static final String PROFILE_NAME = "your-aws-profile"; // the new one
 	private static final Region REGION = Region.EU_WEST_1; // adjust for your bucket
-	private static final String FILE_NAME = "MDL_T1_A_FR_2023_0000_V0003.csv"; // test file name
+	private static final String FILE_NAME = "raw-input.csv"; // test file name
 	private static final String S3_FOLDER = "uploads"; // test file name
 
 	public static void main(String[] args) {
