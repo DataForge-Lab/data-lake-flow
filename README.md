@@ -20,11 +20,12 @@ python-etl/
 ├── README.md             # Project documentation
 └── .gitignore            # Ignore files/folders (e.g., virtualenv, logs, etc.)
 
-# AuthForge - FastAPI Backend
+# app folder (Authentication with Cognito Userpool)
+# AuthForge - FastAPI Backend - 
 
 This project is a secure backend API built with FastAPI that integrates with AWS Cognito for authentication.
 
-## Project Structure:
+## Project Structure for :
 - `app/`: Contains the FastAPI app code
   - `auth/`: Contains Cognito JWT verification and user dependency code
   - `routes/`: Contains user and admin API routes
